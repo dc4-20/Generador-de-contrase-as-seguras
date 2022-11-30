@@ -1,0 +1,32 @@
+import random
+while True:
+    print("Escribe 0 para salir")
+
+    Rl = int(input("Longitud de la contraseña max 50 : "))
+
+    if Rl>50:
+        print("Error(caracteres excesivos)")
+    if Rl<1:
+        exit()
+
+
+
+
+    lower_case = "qwertyuiopasdfghjklñzxcvbnm"
+    upper_case = "QWERTYUIOPASDFGHJKLÑZXCVBNM"
+    number = "0123456789"
+    symbols = "@!#€%/\*"
+
+
+    Use_for =lower_case + upper_case + number + symbols
+    length_for_pass = Rl
+
+
+    password = "".join(random.sample(Use_for, length_for_pass ))
+
+
+
+    print("Tu contraseña segura es: " + password)
+
+
+#By @d.c420
